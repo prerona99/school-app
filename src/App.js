@@ -20,7 +20,7 @@ function App() {
       
       <Routes>
           <Route path="/admin" element={<AdminPortal />} />
-        </Routes>
+      </Routes>
     </div>
   );
 }
