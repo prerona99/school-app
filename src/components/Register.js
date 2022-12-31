@@ -32,7 +32,8 @@ export const Register = (props) => {
             <button type="submit">Log In</button>
         </form>
         <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
-        <button className="link-btn" onClick={routeChange}>Click here if you are an admin</button>
+        <button className="link-btn" onClick={() => props.onFormSwitch('admin')}>Click here if you are an admin</button>
+        {/* <button className="link-btn" onClick={routeChange}>Click here if you are an admin</button> */}
     </div>
     )
 }

@@ -6,7 +6,7 @@ let data = [];
 let records = {};
 let getIndex;
 
-export default class AdminPortal extends Component {
+export const AdminPortal = class AdminPortal extends Component {
   constructor() {
     super();
     this.state = {
@@ -213,6 +213,8 @@ export default class AdminPortal extends Component {
 }
 
 const mapStateToProps = () => {};
+
+// export default AdminPortal = true;
 
 // export default connect(null, mapStateToProps)(App);
 

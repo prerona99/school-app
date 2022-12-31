@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
-import AdminPortal from "./pages/admin/AdminPortal";
+import {AdminPortal} from "./pages/admin/AdminPortal";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 function App() {
@@ -15,12 +15,12 @@ function App() {
   return (
     <div className="App">
       {
-        currentForm === "register" ? <Register onFormSwitch={toggleForm} /> : <Login onFormSwitch={toggleForm} />
+        currentForm === "register" ? <Register onFormSwitch={toggleForm} /> : <AdminPortal onFormSwitch={toggleForm} />
       }
       
-      <Routes>
+      {/* <Routes>
           <Route path="/admin" element={<AdminPortal />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
