@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+import AdminPortal from "../pages/admin/AdminPortal";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
 export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -8,6 +11,12 @@ export const Register = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
+    }
+
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+      let path = '/admin'; 
+      navigate(path);
     }
 
     return (
@@ -23,6 +32,7 @@ export const Register = (props) => {
             <button type="submit">Log In</button>
         </form>
         <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
+        <button className="link-btn" onClick={routeChange}>Click here if you are an admin</button>
     </div>
     )
 }
